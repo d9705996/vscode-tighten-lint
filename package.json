@@ -1,0 +1,82 @@
+{
+	"name": "tighten-lint",
+	"displayName": "tighten-lint",
+	"description": "Tighten linter for Laravel conventions",
+	"repository": {
+		"url": "https://github.com/d9705996/vscode-tighten-lint"
+	},
+	"publisher": "d9705996",
+	"icon": "images/logo.png",
+	"license": "MIT",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Linters"
+	],
+	"keywords": [
+		"Tighten",
+		"PHP",
+		"Laravel"
+	],
+	"activationEvents": [
+		"onLanguage:php"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "tighten-lint",
+			"properties": {
+				"tighten-lint.exec": {
+					"type": "string",
+					"default": "tlint",
+					"description": "tlint executable",
+					"scope": "window"
+				},
+				"tighten-lint.defaultSeverity": {
+					"type": "string",
+					"enum": [
+						"error",
+						"warning",
+						"info",
+						"hint"
+					],
+					"default": "error",
+					"description": "Severity of violations",
+					"scope": "window"
+				},
+				"tighten-lint.severities": {
+					"type": "object",
+					"default": {},
+					"description": "Source to severity mappings",
+					"scope": "window"
+				},
+				"tighten-lint.only": {
+					"type": "array",
+					"default": [],
+					"description": "Policies to include",
+					"scope": "window"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.37.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.2"
+	}
+}
