@@ -7,12 +7,13 @@ A VScode linter for [Tighten Lint](https://github.com/tightenco/tlint)
 ## Installation
 
 * `CTRL` + `SHIFT` + `X` (`View: show extensions`)
-* Search for tighten lint and click install 
+* Search for tighten lint and click install
 
 ## Features
 
 * Customisable linter severities
 * Customise executed linters
+* Supports tlint.json configuration file
 
 ## Requirements
 
@@ -41,6 +42,14 @@ You must install the linter executable as per the [tlint](https://github.com/tig
         "NoInlineVarDocs": "info"
     },
 ```
+
+### tlintUsing a configuration file
+
+If you wish to use a [configuration file](https://github.com/tightenco/tlint#configuration) you should place the `tlint.json` file in the root of your project folder in the required format e.g.
+
+![Explorer](./images/explorer.png "Explorer")
+
+The extension will then use this configuration when linting in combination with the other settings.
 
 ## Known Limitations
 
