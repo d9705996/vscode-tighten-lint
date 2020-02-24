@@ -17,7 +17,7 @@ A VScode linter for [Tighten Lint](https://github.com/tightenco/tlint)
 
 ## Requirements
 
-You must install the linter executable as per the [tlint](https://github.com/tightenco/tlint#install-requires-php71) install instructions.
+You must install the linter executable as per the [tlint](https://github.com/tightenco/tlint#install-requires-php71) install instructions. The minimum supported version is [v3.0.12](https://github.com/tightenco/tlint/releases/tag/v3.0.12)
 
 ## Extension Settings
 
