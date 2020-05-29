@@ -55,7 +55,7 @@ export default class LintProvider {
         }
         this.config = vscode.workspace.getConfiguration("tighten-lint");
 
-        let command: string = this.config.exec + ' lint --json ' + this.getIncludedPolicies() + ' ' + textDocument.fileName;
+        let command: string = this.config.exec + ' lint --json ' + this.getIncludedPolicies() + ' "' + textDocument.fileName + '"';
         let cwd: string = vscode.workspace.workspaceFolders[0].uri.fsPath;
 
         this.outputChannel.appendLine(`Executing: ${command} in ${cwd}`);
