@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
-    "@types/mocha": "^5.2.6",
+    "@types/mocha": "^8.2.0",
     "@types/node": "^10.12.21",
     "@types/vscode": "^1.37.0",
     "glob": "^7.1.4",
